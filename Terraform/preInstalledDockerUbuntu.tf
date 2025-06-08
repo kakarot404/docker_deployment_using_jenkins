@@ -37,13 +37,13 @@ variable "bucket_name" {
 
 # Define the EC2 instance
 resource "aws_instance" "ubuntu_ec2" {
-    ami           = "ami-0b95b064e3dde622c"       # Ubuntu 20.04 AMI for us-east-1, update for your region
-    instance_type = "t3.small"                    # Change this as per your requirements
+    ami           = "<ami - for ec2 image builder built image>"         # Ubuntu 20.04 AMI for us-east-1, update for your region
+    instance_type = "t3.small"                                          # Change this as per your requirements
 
     key_name = "ec2-keyPair"                      
   
   
-    # User data script to install Docker
+                                                                        # User data script to install Docker
     user_data = <<-EOF
                 #!/bin/bash
                 exec > /var/log/user-data.log 2>&1
@@ -72,16 +72,16 @@ resource "aws_instance" "ubuntu_ec2" {
 
     EOF
 
-    # Using existing security group
+                                                                        # Using existing security group
     security_groups = ["nginx-server-security-group"]
 
-    # Tags
+                                                                        # Tags
     tags = {
         Name = "Docker-Ubuntu-Instance"
     }
 }
 
-# Output EC2 Instance Public IP
+                                                                        # Output EC2 Instance Public IP
 output "ec2_public_ip" {
     value = aws_instance.ubuntu_ec2.public_ip
 }
