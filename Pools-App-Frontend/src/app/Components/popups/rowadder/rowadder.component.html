@@ -1,0 +1,34 @@
+<h2 mat-dialog-title>Add Row</h2>
+<mat-dialog-content>
+    <table cellspacing="0">
+        <tr>
+            <td>
+                <mat-form-field>
+                    <mat-label>Name</mat-label>
+                    <input matInput color='warn' formControlName="name" id="name_i">
+                </mat-form-field>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <mat-form-field>
+                    <mat-label>Occupation</mat-label>
+                    <input matInput color='warn' formControlName="occupation" id="occ_i">
+                </mat-form-field>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <mat-form-field>
+                    <mat-label>Age</mat-label>
+                    <input matInput color='warn' formControlName="age" id="age_i">
+                </mat-form-field>
+            </td>
+        </tr>
+    </table>
+    <div mat-dialog-action>
+        <br>
+        <button mat-button color='warn' (click)="addClicked(1)">Add</button>
+        <button mat-button mat-dialog-close (click)="addClicked(0)" color='warn'>Cancel</button>
+    </div>
+</mat-dialog-content>

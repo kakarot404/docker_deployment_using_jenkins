@@ -1,0 +1,42 @@
+services:
+  frontend-container:
+    container_name: frontend-container
+    image: ${REGISTRY}/${FRONTEND_IMAGE_NAME}:${IMAGE_TAG}
+    ports:
+      - "4200:4200"
+    networks:
+      - ${NETWORK}
+    depends_on:
+      - backend-container
+
+  backend-container:
+    container_name: backend-container
+    image: ${REGISTRY}/${BACKEND_IMAGE_NAME}:${IMAGE_TAG}
+    ports:
+      - "1234:1234"
+    environment:
+      - ME_CONFIG_MONGODB_ADMINUSERNAME=${DB_USER}
+      - ME_CONFIG_MONGODB_ADMINPASSWORD=${DB_PASS}
+      - ME_CONFIG_MONGODB_SERVER=${DB_HOST}
+      - ME_CONFIG_MONGODB_DATABASE=${DB_NAME}
+    depends_on:
+      - mongo-container
+    networks:
+      - ${NETWORK}
+
+  mongo-container:
+    container_name: mongo-container
+    image: ${MONGO_IMAGE}
+    ports:
+      - "27017:27017"
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=${DB_USER}
+      - MONGO_INITDB_ROOT_PASSWORD=${DB_PASS}
+    networks:
+      - ${NETWORK}
+
+networks:
+  mongo-network:
+    external: true
+    name: ${NETWORK}
+    driver: bridge

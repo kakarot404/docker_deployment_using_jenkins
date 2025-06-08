@@ -1,0 +1,15 @@
+.manage_display_cell {
+    text-align: center;
+    align-content: center;
+}
+
+.manage_display_cell_icon {
+    width: 5vw;
+    height: 10vh;
+}
+
+.manage_display_cell_text {
+    width: 10vw;
+    padding-top: 10px;
+    text-align: left !important;
+}

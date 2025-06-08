@@ -1,0 +1,45 @@
+<app-nav-bar></app-nav-bar>
+<mat-card class='page-card'>
+    <mat-card-content>
+        <mat-card>
+            <mat-card-title>
+                Authentication <span *ngIf='!this.manageService.authEnabled' style="font-size: small;">Disabled. Below
+                    functionality won't work.</span>
+            </mat-card-title>
+            <mat-card-content id='user_area'>
+                <mat-card id="login_box">
+
+                    <mat-card-content id='login_content'>
+                        <mat-card-title>
+                            Login
+                        </mat-card-title>
+                        <table cellspacing="0">
+                            <tr>
+                                <td>
+                                    <mat-form-field>
+                                        <mat-label>Email</mat-label>
+                                        <input matInput color='warn' formControlName="email" id="email_i">
+                                    </mat-form-field>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <mat-form-field>
+                                        <mat-label>Password</mat-label>
+                                        <input matInput color='warn' formControlName="password" id="password_i" type="password">
+                                    </mat-form-field>
+                                </td>
+                            </tr>
+                        </table>
+                        <div>
+                            <br>
+                            <button mat-button color='warn' (click)='loginUser()'>Login</button>
+                            <button mat-button color='warn' (click)='openRegister()'>Register</button>
+                        </div>
+
+                    </mat-card-content>
+                </mat-card>
+            </mat-card-content>
+        </mat-card>
+    </mat-card-content>
+</mat-card>

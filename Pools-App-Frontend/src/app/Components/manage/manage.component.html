@@ -1,0 +1,40 @@
+<app-nav-bar></app-nav-bar>
+<mat-card class='page-card'>
+    <mat-card-content>
+        <mat-card>
+            <mat-card-title>
+                Manage Config
+            </mat-card-title>
+            <mat-card-content id='app-description' style="margin-top: 5%;">
+                <table class="manage_display_table">
+                    <tr>
+                        <td class="manage_display_cell manage_display_cell_icon">
+                            <mat-icon color='warn'>storage</mat-icon>
+                        </td>
+                        <td class="manage_display_cell manage_display_cell_text">
+                            <h3>Database</h3>
+                        </td>
+                        <td>
+                            <mat-slide-toggle color='warn' (change)="updateDBconfig($event)" [checked]='this.manageService.dbEnabled'>
+
+                            </mat-slide-toggle>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="manage_display_cell manage_display_cell_icon">
+                            <mat-icon color='warn'>account_box</mat-icon>
+                        </td>
+                        <td class="manage_display_cell manage_display_cell_text">
+                            <h3>Authentication</h3>
+                        </td>
+                        <td>
+                            <mat-slide-toggle color='warn' (change)="updateAuthConfig($event)" [checked]='this.manageService.authEnabled'>
+
+                            </mat-slide-toggle>
+                        </td>
+                    </tr>
+                </table>
+            </mat-card-content>
+        </mat-card>
+    </mat-card-content>
+</mat-card>

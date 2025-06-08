@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.page-card {
+    height: 80vh;
+    width: 95vw;
+    margin-left: 1vw;
+    margin-right: 2vw;
+    margin-top: 2vh;
+    overflow: hidden;
+}
+
+.status-success-message {
+    background-color: green;
+  }
+
+.status-failure-message {
+    background-color: red;
+}

@@ -1,0 +1,37 @@
+.db-page-cards {
+    margin-top: 1%;
+}
+
+#page-container {
+    height: 100%;
+    width: 100%;
+}
+
+#db-page-first {
+    height: 15%;
+}
+
+#db-page-second {
+    height: 20%;
+}
+
+#db-page-third {
+    height: 70%;
+    width: 100%;
+}
+
+#table-container {
+    overflow: auto;
+    height: 70%;
+    width: 100%;
+}
+
+#table-area {
+    height: 10% !important;
+    width: 100% !important;
+    overflow: hidden;
+}
+
+.btn-edit {
+    text-align: center;
+}

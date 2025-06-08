@@ -1,0 +1,23 @@
+::ng-deep .mat-focused .mat-form-field-label {
+    color: rgb(223, 70, 15) !important;
+}
+
+ ::ng-deep.mat-form-field-underline {
+    background-color: rgb(223, 70, 15) !important;
+}
+
+ ::ng-deep.mat-form-field-ripple {
+    background-color: rgb(223, 70, 15) !important;
+    ;
+}
+
+#user_area {
+    height: 65vh;
+}
+
+#login_box {
+    margin-top: 5vh;
+    margin-left: 35vw;
+    width: 20vw;
+    height: 50%;
+}

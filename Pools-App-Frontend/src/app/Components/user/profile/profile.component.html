@@ -1,0 +1,57 @@
+<app-nav-bar></app-nav-bar>
+<mat-card class='page-card'>
+    <mat-card-content>
+        <mat-card>
+            <mat-card-title>
+                Authentication <span *ngIf='!this.manageService.authEnabled' style="font-size: small;">Disabled. Below
+                    functionality won't work.</span>
+            </mat-card-title>
+            <mat-card-content id='user_area'>
+                <mat-card id="user_box">
+                    <mat-card-content id='user_content'>
+                        <mat-card-content id='user_data'>
+                            <table>
+                                <tr>
+                                    <td colspan="3" style="text-align: left;padding-left: 2vw;">
+                                        <h1>{{this.authService.name}}</h1>
+                                    </td>
+                                    <td style="text-align: right;">
+                                        <button mat-button color='warn' (click)='logoutUser()'>
+                                            <mat-icon color='warn'>power_settings_new</mat-icon>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4">
+                                        <mat-icon color='warn' style="font-size: 10vw;position: relative;right: 10%;">
+                                            account_circle</mat-icon>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4">
+                                        <button mat-button color='warn' (click)='deleteUser()'>
+                                            <mat-icon color='warn'>delete</mat-icon>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <br><br>
+                                <tr>
+                                    <td></td>
+                                    <td>
+                                        <h2>Email : </h2>
+                                    </td>
+                                    <td>
+                                        <h2>{{this.authService.email}}</h2>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </mat-card-content>
+
+
+                    </mat-card-content>
+                </mat-card>
+            </mat-card-content>
+        </mat-card>
+    </mat-card-content>
+</mat-card>

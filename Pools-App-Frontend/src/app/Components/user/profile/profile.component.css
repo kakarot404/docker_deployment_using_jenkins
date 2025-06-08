@@ -1,0 +1,25 @@
+#user_box {
+    width: 50vw;
+    text-align: center;
+    margin-top: 10vh;
+    margin-left: 25vw;
+}
+
+#user_area {
+    height: 65vh;
+}
+
+table {
+    width: 100%;
+}
+
+td {
+    width: 20vw;
+}
+
+h1 {
+    position: relative;
+    right: 1vw;
+    font-size: 5vh;
+    font-weight: bold;
+}
